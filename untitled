@@ -1,47 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Task Service</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>AI Task Service</h1>
-        <p>Let AI do the hard work for you!</p>
-    </header>
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
 
-    <section id="task-selection">
-        <h2>Choose Your Task</h2>
-        <div class="task-options">
-            <button onclick="showForm('essay')">Essay Writing</button>
-            <button onclick="showForm('feedback')">Text Feedback</button>
-            <button onclick="showForm('translation')">Text Translation</button>
-        </div>
-    </section>
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
 
-    <section id="task-form" style="display: none;">
-        <h2 id="form-title">Submit Your Task</h2>
-        <form id="form">
-            <textarea id="task-input" placeholder="Enter the details of your task here..." required></textarea>
-            <button type="submit" onclick="submitTask(event)">Submit Task</button>
-        </form>
-        <div id="confirmation" style="display: none;">
-            <p>Your task has been submitted! AI is processing it...</p>
-        </div>
-    </section>
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
 
-    <section id="payment-section" style="display: none;">
-        <h2>Payment</h2>
-        <p>Please pay $10 for this service.</p>
-        <button onclick="processPayment()">Pay Now</button>
-    </section>
+h2 {
+    color: #333;
+}
 
-    <footer>
-        <p>&copy; 2024 AI Task Service. All rights reserved.</p>
-    </footer>
+/* Task selection buttons */
+.task-options button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.task-options button:hover {
+    background-color: #45a049;
+}
+
+/* Form styling */
+#task-form {
+    margin-top: 30px;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
